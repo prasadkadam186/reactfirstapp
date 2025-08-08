@@ -3,6 +3,10 @@
 import { Component } from "react";
 
 export default class Student extends Component{
+    // Purpose : Show the student data on click of show data button
+    showData(){
+        alert(this.Student.name)
+    }
     constructor()
     {
         super();
@@ -17,7 +21,7 @@ export default class Student extends Component{
         return(
             <div>
                  <h1>Hey! Its Student Class based components</h1>
-                 <div>{this.Student.name}</div>
+                 <button onClick={()=>{this.showData()}}>Show Student Data</button>
             </div>
         );
     }

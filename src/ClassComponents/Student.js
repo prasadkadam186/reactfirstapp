@@ -24,6 +24,7 @@ export default class Student extends Component{
             <div>
                  <h1>Hey! Its Student Class based components</h1>
                  <button onClick={()=>{this.showData()}}>Show Student Data</button>
+                 {/* Passing props to class based components i.e Subject */}
                  <Subject subjectName={this.Student.subjectName}/>
             </div>
         );

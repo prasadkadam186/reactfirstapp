@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Component } from 'react';
 import Navbar from './navbar/navbar';
 import Student from './ClassComponents/Student';
+import Props from './ClassComponents/Props';
 
 function App() {
   return (
@@ -11,8 +12,11 @@ function App() {
         <Navbar />
         <div className="container mt-4">
           <Routes>
+            <Route path="/" element={<Teacher />} />
             <Route path="/teacher" element={<Teacher />} />
             <Route path="/student" element={<Student />} />
+            {/* Props with functional components */}
+            <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
           </Routes>
         </div>
       </Router>

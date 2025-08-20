@@ -14,7 +14,10 @@ function Navbar() {
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/student">Student</Link>
+                                <Link className="nav-link" to="/student">propsWithClassComp</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/props">propsWithFuncComp</Link>
                             </li>
                         </ul>
                     </div>

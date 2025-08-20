@@ -1,3 +1,4 @@
+// Prpos with class based components
 import React from "react";
 export class Subject extends React.Component{
     render()

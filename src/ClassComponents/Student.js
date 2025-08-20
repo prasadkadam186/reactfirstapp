@@ -1,6 +1,7 @@
 
 // Class based components Via seperate file
 import { Component } from "react";
+import {Subject} from "./Subject"
 
 export default class Student extends Component{
     // Purpose : Show the student data on click of show data button
@@ -13,7 +14,8 @@ export default class Student extends Component{
         this.Student={
             name : 'Samarth',
             age : '25',
-            address : 'Pune'
+            address : 'Pune',
+            subjectName : 'Marathi'
         }
     }
     render()
@@ -22,6 +24,7 @@ export default class Student extends Component{
             <div>
                  <h1>Hey! Its Student Class based components</h1>
                  <button onClick={()=>{this.showData()}}>Show Student Data</button>
+                 <Subject subjectName={this.Student.subjectName}/>
             </div>
         );
     }

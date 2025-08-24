@@ -4,6 +4,7 @@ import { Component } from 'react';
 import Navbar from './navbar/navbar';
 import Student from './ClassComponents/Student';
 import Props from './ClassComponents/Props';
+import Loginform from './Forms/Loginform';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/student" element={<Student />} />
             {/* Props with functional components */}
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
+            <Route path="/Loginform" element={<Loginform />} />
           </Routes>
         </div>
       </Router>

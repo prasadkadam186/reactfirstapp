@@ -19,6 +19,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/props">propsWithFuncComp</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Loginform">React Forms</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

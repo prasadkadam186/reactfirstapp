@@ -5,6 +5,7 @@ import Navbar from './navbar/navbar';
 import Student from './ClassComponents/Student';
 import Props from './ClassComponents/Props';
 import Loginform from './Forms/Loginform';
+import Conditionalrendering from './Forms/Conditionalrendering';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             {/* Props with functional components */}
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
             <Route path="/Loginform" element={<Loginform />} />
+            <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
           </Routes>
         </div>
       </Router>

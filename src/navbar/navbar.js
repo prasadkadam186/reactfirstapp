@@ -22,6 +22,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Loginform">React Forms</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

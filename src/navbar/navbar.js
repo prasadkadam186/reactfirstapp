@@ -25,6 +25,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
                             </li>
+                            <li>
+                                <Link className="nav-link" to="/Inputbox">InputField</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

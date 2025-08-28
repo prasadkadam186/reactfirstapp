@@ -6,6 +6,7 @@ import Student from './ClassComponents/Student';
 import Props from './ClassComponents/Props';
 import Loginform from './Forms/Loginform';
 import Conditionalrendering from './Forms/Conditionalrendering';
+import Inputbox from './FuncComponent/Inputbox';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
             <Route path="/Loginform" element={<Loginform />} />
             <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
+            <Route path='/Inputbox' element={<Inputbox/>}/>
           </Routes>
         </div>
       </Router>
@@ -29,12 +31,12 @@ function App() {
 }
 
 // Function based component in same class
-function Seconduser()
-{
-  return (
-    <h1>Here is Second User component</h1>
-  );
-}
+// function Seconduser()
+// {
+//   return (
+//     <h1>Here is Second User component</h1>
+//   );
+// }
 
 // Class based component within one class
 class Teacher extends Component{

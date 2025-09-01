@@ -28,6 +28,24 @@ function Navbar() {
                             <li>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
                             </li>
+                            {/* Dropdown Menu */}
+                            <li className="nav-item dropdown">
+                                <a 
+                                    className="nav-link dropdown-toggle" 
+                                    href="#" 
+                                    id="navbarDropdown" 
+                                    role="button" 
+                                    data-bs-toggle="dropdown" 
+                                    aria-expanded="false"
+                                >
+                                    Life Cycle Methods
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="ConstructorClass">ConstructorClass</Link>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

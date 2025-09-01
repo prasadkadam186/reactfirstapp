@@ -7,6 +7,7 @@ import Props from './ClassComponents/Props';
 import Loginform from './Forms/Loginform';
 import Conditionalrendering from './Forms/Conditionalrendering';
 import Inputbox from './FuncComponent/Inputbox';
+import ConstructorClass from './Life-cycle-methods/ConstructorClass'
 
 function App() {
   function passFunctionAsProps()
@@ -29,6 +30,7 @@ function App() {
 
             {/* Passing the function as props to Inputbox child component from App components */}
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
+            <Route path='ConstructorClass' element={<ConstructorClass/>}/>
           </Routes>
         </div>
       </Router>

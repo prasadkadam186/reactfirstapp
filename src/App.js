@@ -9,6 +9,10 @@ import Conditionalrendering from './Forms/Conditionalrendering';
 import Inputbox from './FuncComponent/Inputbox';
 
 function App() {
+  function passFunctionAsProps()
+  {
+    alert("Passing the function as props from Parent to Child")
+  }
   return (
     <div className="App">
       <Router>
@@ -22,7 +26,9 @@ function App() {
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
             <Route path="/Loginform" element={<Loginform />} />
             <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
-            <Route path='/Inputbox' element={<Inputbox/>}/>
+
+            {/* Passing the function as props to Inputbox child component from App components */}
+            <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
           </Routes>
         </div>
       </Router>

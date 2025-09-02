@@ -15,7 +15,7 @@ class ConstructorClass extends React.Component{
             <div>
                 This is ConstructorClass based components
                 <br/><br/>
-                <h7>{this.state.data}</h7>
+                <h2>{this.state.data}</h2>
             </div>
         )
     }

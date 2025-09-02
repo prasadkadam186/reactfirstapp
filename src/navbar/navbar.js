@@ -44,6 +44,9 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="ConstructorClass">ConstructorClass</Link>
                                     </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="RenderMethodClass">RenderMethodClass</Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

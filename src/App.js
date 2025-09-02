@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import Navbar from './navbar/navbar';
 import Student from './ClassComponents/Student';
 import Props from './ClassComponents/Props';
@@ -8,8 +8,10 @@ import Loginform from './Forms/Loginform';
 import Conditionalrendering from './Forms/Conditionalrendering';
 import Inputbox from './FuncComponent/Inputbox';
 import ConstructorClass from './Life-cycle-methods/ConstructorClass'
+import RenderMethodClass from './Life-cycle-methods/RenderMethodClass'
 
 function App() {
+  const [name, setName] = useState("Test User");
   function passFunctionAsProps()
   {
     alert("Passing the function as props from Parent to Child")
@@ -31,6 +33,7 @@ function App() {
             {/* Passing the function as props to Inputbox child component from App components */}
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
             <Route path='ConstructorClass' element={<ConstructorClass/>}/>
+            <Route path='RenderMethodClass' element={<RenderMethodClass name={name}/>}/>
           </Routes>
         </div>
       </Router>

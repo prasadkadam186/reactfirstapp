@@ -47,6 +47,9 @@ function Navbar() {
                                      <li>
                                         <Link className="dropdown-item" to="RenderMethodClass">RenderMethodClass</Link>
                                     </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="ComponentDidMount">ComponentDidMount</Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

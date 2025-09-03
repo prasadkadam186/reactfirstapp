@@ -9,6 +9,7 @@ import Conditionalrendering from './Forms/Conditionalrendering';
 import Inputbox from './FuncComponent/Inputbox';
 import ConstructorClass from './Life-cycle-methods/ConstructorClass'
 import RenderMethodClass from './Life-cycle-methods/RenderMethodClass'
+import ComponentDidMount from './Life-cycle-methods/ComponentDidMount';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -34,6 +35,7 @@ function App() {
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
             <Route path='ConstructorClass' element={<ConstructorClass/>}/>
             <Route path='RenderMethodClass' element={<RenderMethodClass name={name}/>}/>
+            <Route path='ComponentDidMount' element={<ComponentDidMount/>}/>
           </Routes>
         </div>
       </Router>

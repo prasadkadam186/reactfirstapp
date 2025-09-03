@@ -11,6 +11,7 @@ import ConstructorClass from './Life-cycle-methods/ConstructorClass'
 import RenderMethodClass from './Life-cycle-methods/RenderMethodClass'
 import ComponentDidMount from './Life-cycle-methods/ComponentDidMount';
 import ComponentDidUpdate from './Life-cycle-methods/ComponentDidUpdate';
+import ComponentShouldUpdate from './Life-cycle-methods/ComponentShouldUpdate';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -38,6 +39,7 @@ function App() {
             <Route path='RenderMethodClass' element={<RenderMethodClass name={name}/>}/>
             <Route path='ComponentDidMount' element={<ComponentDidMount/>}/>
             <Route path='ComponentDidUpdate' element={<ComponentDidUpdate/>}/>
+            <Route path='ComponentShouldUpdate' element={<ComponentShouldUpdate/>}/>
           </Routes>
         </div>
       </Router>

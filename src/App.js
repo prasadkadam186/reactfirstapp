@@ -10,6 +10,7 @@ import Inputbox from './FuncComponent/Inputbox';
 import ConstructorClass from './Life-cycle-methods/ConstructorClass'
 import RenderMethodClass from './Life-cycle-methods/RenderMethodClass'
 import ComponentDidMount from './Life-cycle-methods/ComponentDidMount';
+import ComponentDidUpdate from './Life-cycle-methods/ComponentDidUpdate';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -36,6 +37,7 @@ function App() {
             <Route path='ConstructorClass' element={<ConstructorClass/>}/>
             <Route path='RenderMethodClass' element={<RenderMethodClass name={name}/>}/>
             <Route path='ComponentDidMount' element={<ComponentDidMount/>}/>
+            <Route path='ComponentDidUpdate' element={<ComponentDidUpdate/>}/>
           </Routes>
         </div>
       </Router>

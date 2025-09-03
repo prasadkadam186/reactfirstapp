@@ -50,6 +50,9 @@ function Navbar() {
                                      <li>
                                         <Link className="dropdown-item" to="ComponentDidMount">ComponentDidMount</Link>
                                     </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="ComponentDidUpdate">ComponentDidUpdate</Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

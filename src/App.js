@@ -2,11 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Component, useState } from 'react';
 import Navbar from './navbar/navbar';
-import Student from './ClassComponents/Student';
-import Props from './ClassComponents/Props';
+import Student from './Components/ClassComponents/Student';
+import Props from './Components/ClassComponents/Props';
 import Loginform from './Forms/Loginform';
 import Conditionalrendering from './Forms/Conditionalrendering';
-import Inputbox from './FuncComponent/Inputbox';
+import Inputbox from './Components/FuncComponent/Inputbox';
 import ConstructorClass from './Life-cycle-methods/ConstructorClass'
 import RenderMethodClass from './Life-cycle-methods/RenderMethodClass'
 import ComponentDidMount from './Life-cycle-methods/ComponentDidMount';

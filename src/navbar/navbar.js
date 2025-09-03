@@ -10,14 +10,55 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
+                            </li> */}
+                            <li className="nav-item dropdown">
+                                <a
+                                    className="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Components Types
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/student">propsWithClassComp</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/props">propsWithFuncComp</Link>
+                                    </li>
+                                </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/student">propsWithClassComp</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/props">propsWithFuncComp</Link>
+                            {/* Dropdown Menu */}
+                            <li className="nav-item dropdown">
+                                <a
+                                    className="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Life Cycle Methods
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="ConstructorClass">ConstructorClass</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="RenderMethodClass">RenderMethodClass</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="ComponentDidMount">ComponentDidMount</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="ComponentDidUpdate">ComponentDidUpdate</Link>
+                                    </li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Loginform">React Forms</Link>
@@ -27,33 +68,6 @@ function Navbar() {
                             </li>
                             <li>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
-                            </li>
-                            {/* Dropdown Menu */}
-                            <li className="nav-item dropdown">
-                                <a 
-                                    className="nav-link dropdown-toggle" 
-                                    href="#" 
-                                    id="navbarDropdown" 
-                                    role="button" 
-                                    data-bs-toggle="dropdown" 
-                                    aria-expanded="false"
-                                >
-                                    Life Cycle Methods
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <Link className="dropdown-item" to="ConstructorClass">ConstructorClass</Link>
-                                    </li>
-                                     <li>
-                                        <Link className="dropdown-item" to="RenderMethodClass">RenderMethodClass</Link>
-                                    </li>
-                                     <li>
-                                        <Link className="dropdown-item" to="ComponentDidMount">ComponentDidMount</Link>
-                                    </li>
-                                    <li>
-                                        <Link className="dropdown-item" to="ComponentDidUpdate">ComponentDidUpdate</Link>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>

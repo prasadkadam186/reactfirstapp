@@ -1,0 +1,25 @@
+
+.success {
+    margin: 2% 2% 2% 30%;
+    border-radius: 10px;
+    width: 40%;
+    height: 17rem;
+}
+
+.button-sucess {
+    background-color: rgb(66, 217, 52);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button-cancel{
+   background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    margin-left: 5%;
+}

@@ -13,6 +13,7 @@ function Navbar() {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li> */}
+                            {/* Component Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
                                     className="nav-link dropdown-toggle"
@@ -33,7 +34,7 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-                            {/* Dropdown Menu */}
+                            {/* Life Cycle Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
                                     className="nav-link dropdown-toggle"
@@ -66,6 +67,30 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
+                            {/* Hooks Dropdown Menu */}
+                            <li className="nav-item dropdown">
+                                <a
+                                    className="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Hooks
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="UserEffectHook">UserEffectHook</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="UseEffectWithConditionOnState">UseEffectWithConditionOnState</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="UseEffectWithConditionForPropsParent">UseEffectWithConditionForProps</Link>
+                                    </li>
+                                </ul>
+                            </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Loginform">React Forms</Link>
                             </li>
@@ -75,6 +100,7 @@ function Navbar() {
                             <li>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
                             </li>
+
                         </ul>
                     </div>
                 </div>

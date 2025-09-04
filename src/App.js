@@ -13,6 +13,9 @@ import ComponentDidMount from './Life-cycle-methods/ComponentDidMount';
 import ComponentDidUpdate from './Life-cycle-methods/ComponentDidUpdate';
 import ComponentShouldUpdate from './Life-cycle-methods/ComponentShouldUpdate';
 import ComponentWillUnmountParent from './Life-cycle-methods/ComponentWillUnmountParent'
+import UserEffectHook from './Hooks/UseEffectHooks'
+import UseEffectWithConditionOnState from './Hooks/UseEffectWithConditionOnState'
+import UseEffectWithConditionForPropsParent from './Hooks/UseEffectWithConditionForPropsParent'
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -42,6 +45,9 @@ function App() {
             <Route path='ComponentDidUpdate' element={<ComponentDidUpdate/>}/>
             <Route path='ComponentShouldUpdate' element={<ComponentShouldUpdate/>}/>
             <Route path='ComponentWillUnmountParent' element={<ComponentWillUnmountParent/>}/>
+            <Route path='UserEffectHook' element={<UserEffectHook/>}/>
+            <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState/>}/>
+            <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
           </Routes>
         </div>
       </Router>

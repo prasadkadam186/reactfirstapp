@@ -45,6 +45,7 @@ function Navbar() {
                                         <Link className="dropdown-item" to="ConstructorClass">ConstructorClass</Link>
                                     </li>
                                 </ul>
+                                <Link className='nav-link' to="/Form_validation">FormWithValidation</Link>
                             </li>
                         </ul>
                     </div>

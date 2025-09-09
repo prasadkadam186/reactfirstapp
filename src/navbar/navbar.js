@@ -100,7 +100,14 @@ function Navbar() {
                             <li>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
                             </li>
-
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="ArrayListWithMap">ArrayListWithMap</Link>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

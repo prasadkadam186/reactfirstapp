@@ -16,6 +16,7 @@ import ComponentWillUnmountParent from './Life-cycle-methods/ComponentWillUnmoun
 import UserEffectHook from './Hooks/UseEffectHooks'
 import UseEffectWithConditionOnState from './Hooks/UseEffectWithConditionOnState'
 import UseEffectWithConditionForPropsParent from './Hooks/UseEffectWithConditionForPropsParent'
+import ArrayListWithMap from './Collection/ArrayListWithMap'
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -48,6 +49,7 @@ function App() {
             <Route path='UserEffectHook' element={<UserEffectHook/>}/>
             <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState/>}/>
             <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
+            <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
           </Routes>
         </div>
       </Router>

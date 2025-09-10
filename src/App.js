@@ -18,6 +18,7 @@ import UseEffectWithConditionOnState from './Hooks/UseEffectWithConditionOnState
 import UseEffectWithConditionForPropsParent from './Hooks/UseEffectWithConditionForPropsParent'
 import ArrayListWithMap from './Collection/ArrayListWithMap'
 import NestedArray from './Collection/NestedArray'
+import ReusableParent from './ReusableComponents/ReusableParent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
             <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
             <Route path='NestedArray' element={<NestedArray/>}/>
+            <Route path='ReusableParent' element={<ReusableParent/>}/>
           </Routes>
         </div>
       </Router>

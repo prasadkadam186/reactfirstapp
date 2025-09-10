@@ -106,6 +106,9 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="ArrayListWithMap">ArrayListWithMap</Link>
                                     </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="NestedArray">NestedArrayWithNestedMap</Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

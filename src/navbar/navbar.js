@@ -89,6 +89,9 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="UseEffectWithConditionForPropsParent">UseEffectWithConditionForProps</Link>
                                     </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="UserMemoComponent">UserMemoComponent</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item">

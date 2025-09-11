@@ -19,6 +19,7 @@ import UseEffectWithConditionForPropsParent from './Hooks/UseEffectWithCondition
 import ArrayListWithMap from './Collection/ArrayListWithMap'
 import NestedArray from './Collection/NestedArray'
 import ReusableParent from './ReusableComponents/ReusableParent'
+import UserMemoComponent from './Hooks/UseMemoConponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
             <Route path='ComponentWillUnmountParent' element={<ComponentWillUnmountParent/>}/>
             <Route path='UserEffectHook' element={<UserEffectHook/>}/>
             <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState/>}/>
+            <Route path='UserMemoComponent' element={<UserMemoComponent/>}/>
             <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
             <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
             <Route path='NestedArray' element={<NestedArray/>}/>

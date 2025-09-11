@@ -110,7 +110,7 @@ function Navbar() {
                                         <Link className="dropdown-item" to="NestedArray">NestedArrayWithNestedMap</Link>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="ReusableParent">ReusableParent</Link>
+                                        <Link className="dropdown-item" to="ReusableParent">ReusableParent & Lifting State up</Link>
                                     </li>
                                 </ul>
                             </li>

@@ -40,7 +40,7 @@ function NestedArray() {
                     </tr>
                     {
                         personData.map((item, index) => (
-                            <tr>
+                            <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td>{item.name}</td>
                                 <td>{item.age}</td>
@@ -54,8 +54,8 @@ function NestedArray() {
                                                 <th>Zip Code</th>
                                             </tr>
                                             {
-                                                item.address.map((result) => (
-                                                    <tr>
+                                                item.address.map((result,index) => (
+                                                    <tr key={index}>
                                                         <td>{result.city}</td>
                                                         <td>{result.state}</td>
                                                         <td>{result.zipCode}</td>

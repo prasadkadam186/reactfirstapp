@@ -21,6 +21,7 @@ import NestedArray from './Collection/NestedArray'
 import ReusableParent from './ReusableComponents/ReusableParent'
 import UserMemoComponent from './Hooks/UseMemoConponent';
 import RefComponents from './Hooks/RefComponents';
+import FordwardRefParentComponent from './Hooks/FordwardRefParentComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
             <Route path='NestedArray' element={<NestedArray/>}/>
             <Route path='ReusableParent' element={<ReusableParent/>}/>
+            <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent/>}/>
           </Routes>
         </div>
       </Router>

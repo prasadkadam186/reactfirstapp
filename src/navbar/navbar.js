@@ -95,6 +95,9 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="RefComponents">RefComponents</Link>
                                     </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="FordwardRefParentComponent">Fordward Ref Component</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item">

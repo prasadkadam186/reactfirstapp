@@ -8,7 +8,10 @@ import Loginform from './Forms/Loginform';
 import Conditionalrendering from './Forms/Conditionalrendering';
 import Inputbox from './FuncComponent/Inputbox';
 import ConstructorClass from './Life-cycle-methods/ConstructorClass'
-import Form_validation from './Forms/Form-validations';
+import ControlledComponent from './FuncComponent/ControlledComponent'
+import UncontrolledComponent from './FuncComponent/UncontrolledComponent';
+import Form_validation from './Forms/Form-validations'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   function passFunctionAsProps()
@@ -28,7 +31,8 @@ function App() {
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
             <Route path="/Loginform" element={<Loginform />} />
             <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
-
+            <Route path="/ControlledComponent" element={<ControlledComponent />} />
+            <Route path="/UncontrolledComponent" element={<UncontrolledComponent />} />
             {/* Passing the function as props to Inputbox child component from App components */}
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
             <Route path='ConstructorClass' element={<ConstructorClass/>}/>

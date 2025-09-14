@@ -32,6 +32,12 @@ function Navbar() {
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/props">propsWithFuncComp</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/ControlledComponent">ControlledComponent</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</Link>
+                                    </li>
                                 </ul>
                             </li>
                             {/* Life Cycle Dropdown Menu */}

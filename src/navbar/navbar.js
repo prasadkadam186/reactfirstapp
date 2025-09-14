@@ -106,26 +106,42 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/Loginform">React Forms</Link>
+                            {/* React Form dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">React Form</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/Loginform">React Forms</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="nav-link" to="/Inputbox">InputField</Link>
+                                    </li>
+                                </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
-                            </li>
-                            <li>
-                                <Link className="nav-link" to="/Inputbox">InputField</Link>
-                            </li>
+                            {/* Collection dropdown  */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
                                         <Link className="dropdown-item" to="ArrayListWithMap">ArrayListWithMap</Link>
                                     </li>
-                                     <li>
+                                    <li>
                                         <Link className="dropdown-item" to="NestedArray">NestedArrayWithNestedMap</Link>
                                     </li>
                                     <li>
                                         <Link className="dropdown-item" to="ReusableParent">ReusableParent & Lifting State up</Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">HOC (High Order Component)</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="HocComponent">HocComponent</Link>
                                     </li>
                                 </ul>
                             </li>

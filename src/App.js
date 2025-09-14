@@ -25,6 +25,7 @@ import FordwardRefParentComponent from './Hooks/FordwardRefParentComponent'
 import ControlledComponent from './Components/FuncComponent/ControlledComponent'
 import UncontrolledComponent from './Components/FuncComponent/UncontrolledComponent';
 import Form_validation from './Forms/Form-validations'
+import HocComponent from './HOC/hocComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
             <Route path='ReusableParent' element={<ReusableParent/>}/>
             <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent/>}/>
             <Route path='Form_validation' element={<Form_validation/>}/>
+            <Route path='HocComponent' element={<HocComponent/>}/>
           </Routes>
         </div>
       </Router>

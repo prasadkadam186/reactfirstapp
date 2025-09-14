@@ -22,8 +22,8 @@ import ReusableParent from './ReusableComponents/ReusableParent'
 import UserMemoComponent from './Hooks/UseMemoConponent';
 import RefComponents from './Hooks/RefComponents';
 import FordwardRefParentComponent from './Hooks/FordwardRefParentComponent'
-import ControlledComponent from './FuncComponent/ControlledComponent'
-import UncontrolledComponent from './FuncComponent/UncontrolledComponent';
+import ControlledComponent from './Components/FuncComponent/ControlledComponent'
+import UncontrolledComponent from './Components/FuncComponent/UncontrolledComponent';
 import Form_validation from './Forms/Form-validations'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

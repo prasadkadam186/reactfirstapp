@@ -13,6 +13,7 @@ function Navbar() {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li> */}
+                            {/* </li>  */}
                             {/* Component Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
@@ -107,7 +108,17 @@ function Navbar() {
                                 <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
                             </li>
                             <li>
+
+                            </li>
+                                <ul>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/ControlledComponent">ControlledComponent</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</Link>
+                                    </li>
+                                </ul>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
@@ -122,6 +133,7 @@ function Navbar() {
                                         <Link className="dropdown-item" to="ReusableParent">ReusableParent & Lifting State up</Link>
                                     </li>
                                 </ul>
+                                <Link className='nav-link' to="/Form_validation">FormWithValidation</Link>
                             </li>
                         </ul>
                     </div>

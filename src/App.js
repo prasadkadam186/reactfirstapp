@@ -22,6 +22,9 @@ import ReusableParent from './ReusableComponents/ReusableParent'
 import UserMemoComponent from './Hooks/UseMemoConponent';
 import RefComponents from './Hooks/RefComponents';
 import FordwardRefParentComponent from './Hooks/FordwardRefParentComponent'
+import ControlledComponent from './FuncComponent/ControlledComponent'
+import UncontrolledComponent from './FuncComponent/UncontrolledComponent';
+import Form_validation from './Forms/Form-validations'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -43,7 +46,8 @@ function App() {
             <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
             <Route path="/Loginform" element={<Loginform />} />
             <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
-
+            <Route path="/ControlledComponent" element={<ControlledComponent />} />
+            <Route path="/UncontrolledComponent" element={<UncontrolledComponent />} />
             {/* Passing the function as props to Inputbox child component from App components */}
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
             <Route path='ConstructorClass' element={<ConstructorClass/>}/>
@@ -61,6 +65,7 @@ function App() {
             <Route path='NestedArray' element={<NestedArray/>}/>
             <Route path='ReusableParent' element={<ReusableParent/>}/>
             <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent/>}/>
+            <Route path='Form_validation' element={<Form_validation/>}/>
           </Routes>
         </div>
       </Router>

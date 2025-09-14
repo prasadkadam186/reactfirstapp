@@ -16,6 +16,13 @@ import ComponentWillUnmountParent from './Life-cycle-methods/ComponentWillUnmoun
 import UserEffectHook from './Hooks/UseEffectHooks'
 import UseEffectWithConditionOnState from './Hooks/UseEffectWithConditionOnState'
 import UseEffectWithConditionForPropsParent from './Hooks/UseEffectWithConditionForPropsParent'
+import ArrayListWithMap from './Collection/ArrayListWithMap'
+import NestedArray from './Collection/NestedArray'
+import ReusableParent from './ReusableComponents/ReusableParent'
+import UserMemoComponent from './Hooks/UseMemoConponent';
+import RefComponents from './Hooks/RefComponents';
+import FordwardRefParentComponent from './Hooks/FordwardRefParentComponent'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -47,7 +54,13 @@ function App() {
             <Route path='ComponentWillUnmountParent' element={<ComponentWillUnmountParent/>}/>
             <Route path='UserEffectHook' element={<UserEffectHook/>}/>
             <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState/>}/>
+            <Route path='UserMemoComponent' element={<UserMemoComponent/>}/>
+            <Route path='RefComponents' element={<RefComponents/>}/>
             <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
+            <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
+            <Route path='NestedArray' element={<NestedArray/>}/>
+            <Route path='ReusableParent' element={<ReusableParent/>}/>
+            <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent/>}/>
           </Routes>
         </div>
       </Router>

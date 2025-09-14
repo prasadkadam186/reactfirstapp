@@ -89,6 +89,15 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="UseEffectWithConditionForPropsParent">UseEffectWithConditionForProps</Link>
                                     </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="UserMemoComponent">UserMemoComponent</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="RefComponents">RefComponents</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="FordwardRefParentComponent">Fordward Ref Component</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item">
@@ -100,7 +109,20 @@ function Navbar() {
                             <li>
                                 <Link className="nav-link" to="/Inputbox">InputField</Link>
                             </li>
-
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="ArrayListWithMap">ArrayListWithMap</Link>
+                                    </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="NestedArray">NestedArrayWithNestedMap</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="ReusableParent">ReusableParent & Lifting State up</Link>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

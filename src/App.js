@@ -29,6 +29,7 @@ import HocComponent from './HOC/hocComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PageNotFound404 from './navbar/PageNotFound404';
 import RoleBasedPageInfo from './navbar/RoleBasedPageInfo';
+import Home from './Home/Home';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -41,7 +42,7 @@ function App() {
         <Navbar />
         <div className="container mt-4">
           <Routes>
-            <Route path="/" element={<Teacher />} />
+            <Route path="/" element={<Home />} />
             <Route path="/teacher" element={<Teacher />} />
             <Route path="/student" element={<Student />} />
             {/* Props with functional components */}

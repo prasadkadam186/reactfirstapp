@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 import { Component, useState } from 'react';
 import Navbar from './navbar/navbar';
 import Student from './Components/ClassComponents/Student';
@@ -27,16 +27,16 @@ import UncontrolledComponent from './Components/FuncComponent/UncontrolledCompon
 import Form_validation from './Forms/Form-validations'
 import HocComponent from './HOC/hocComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PageNotFound404 from './navbar/PageNotFound404';
 
 function App() {
   const [name, setName] = useState("Test User");
-  function passFunctionAsProps()
-  {
+  function passFunctionAsProps() {
     alert("Passing the function as props from Parent to Child")
   }
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Navbar />
         <div className="container mt-4">
           <Routes>
@@ -44,33 +44,36 @@ function App() {
             <Route path="/teacher" element={<Teacher />} />
             <Route path="/student" element={<Student />} />
             {/* Props with functional components */}
-            <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />}/>
+            <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />} />
             <Route path="/Loginform" element={<Loginform />} />
-            <Route path='Conditionalrendering' element={<Conditionalrendering/>}/>
+            <Route path='Conditionalrendering' element={<Conditionalrendering />} />
             <Route path="/ControlledComponent" element={<ControlledComponent />} />
             <Route path="/UncontrolledComponent" element={<UncontrolledComponent />} />
             {/* Passing the function as props to Inputbox child component from App components */}
-            <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps}/>}/>
-            <Route path='ConstructorClass' element={<ConstructorClass/>}/>
-            <Route path='RenderMethodClass' element={<RenderMethodClass name={name}/>}/>
-            <Route path='ComponentDidMount' element={<ComponentDidMount/>}/>
-            <Route path='ComponentDidUpdate' element={<ComponentDidUpdate/>}/>
-            <Route path='ComponentShouldUpdate' element={<ComponentShouldUpdate/>}/>
-            <Route path='ComponentWillUnmountParent' element={<ComponentWillUnmountParent/>}/>
-            <Route path='UserEffectHook' element={<UserEffectHook/>}/>
-            <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState/>}/>
-            <Route path='UserMemoComponent' element={<UserMemoComponent/>}/>
-            <Route path='RefComponents' element={<RefComponents/>}/>
-            <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent/>}/>
-            <Route path='ArrayListWithMap' element={<ArrayListWithMap/>}/>
-            <Route path='NestedArray' element={<NestedArray/>}/>
-            <Route path='ReusableParent' element={<ReusableParent/>}/>
-            <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent/>}/>
-            <Route path='Form_validation' element={<Form_validation/>}/>
-            <Route path='HocComponent' element={<HocComponent/>}/>
+            <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps} />} />
+            <Route path='ConstructorClass' element={<ConstructorClass />} />
+            <Route path='RenderMethodClass' element={<RenderMethodClass name={name} />} />
+            <Route path='ComponentDidMount' element={<ComponentDidMount />} />
+            <Route path='ComponentDidUpdate' element={<ComponentDidUpdate />} />
+            <Route path='ComponentShouldUpdate' element={<ComponentShouldUpdate />} />
+            <Route path='ComponentWillUnmountParent' element={<ComponentWillUnmountParent />} />
+            <Route path='UserEffectHook' element={<UserEffectHook />} />
+            <Route path='UseEffectWithConditionOnState' element={<UseEffectWithConditionOnState />} />
+            <Route path='UserMemoComponent' element={<UserMemoComponent />} />
+            <Route path='RefComponents' element={<RefComponents />} />
+            <Route path='UseEffectWithConditionForPropsParent' element={<UseEffectWithConditionForPropsParent />} />
+            <Route path='ArrayListWithMap' element={<ArrayListWithMap />} />
+            <Route path='NestedArray' element={<NestedArray />} />
+            <Route path='ReusableParent' element={<ReusableParent />} />
+            <Route path='FordwardRefParentComponent' element={<FordwardRefParentComponent />} />
+            <Route path='Form_validation' element={<Form_validation />} />
+            <Route path='HocComponent' element={<HocComponent />} />
+            <Route path='PageNotFound404' element={<PageNotFound404/>}/>
+            <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
           </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
+
     </div>
   );
 }
@@ -84,17 +87,15 @@ function App() {
 // }
 
 // Class based component within one class
-class Teacher extends Component{
-  constructor()
-  {
+class Teacher extends Component {
+  constructor() {
     super();
-    this.data={
-      name :  "Prasad"
+    this.data = {
+      name: "Prasad"
     }
   }
-  render()
-  {
-    return(
+  render() {
+    return (
       <div>Hey Its Teacher Component and welcome {this.data.name}</div>
     )
   }

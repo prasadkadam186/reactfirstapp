@@ -1,3 +1,4 @@
+// Purpose of Link : its used for routing without refreshing the page (<a> tag refesh the entire page that's why we are using this link tag)
 import { Link } from 'react-router-dom';
 function Navbar() {
     return (

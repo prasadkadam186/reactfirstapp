@@ -146,6 +146,18 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
+
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Use of Param's</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="/RoleBasedPageInfo/firstUser">First User</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/RoleBasedPageInfo/secondUser">Second User</Link>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

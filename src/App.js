@@ -28,6 +28,7 @@ import Form_validation from './Forms/Form-validations'
 import HocComponent from './HOC/hocComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PageNotFound404 from './navbar/PageNotFound404';
+import RoleBasedPageInfo from './navbar/RoleBasedPageInfo';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -69,6 +70,7 @@ function App() {
             <Route path='Form_validation' element={<Form_validation />} />
             <Route path='HocComponent' element={<HocComponent />} />
             <Route path='PageNotFound404' element={<PageNotFound404/>}/>
+            <Route path='RoleBasedPageInfo/:name' element={<RoleBasedPageInfo/>}/>
             <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
           </Routes>
         </div>

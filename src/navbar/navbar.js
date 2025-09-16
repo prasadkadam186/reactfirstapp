@@ -1,6 +1,8 @@
 // Purpose of Link : its used for routing without refreshing the page (<a> tag refesh the entire page that's why we are using this link tag)
+
 import { Link } from 'react-router-dom';
 function Navbar() {
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -104,6 +106,9 @@ function Navbar() {
                                     </li>
                                     <li>
                                         <Link className="dropdown-item" to="FordwardRefParentComponent">Fordward Ref Component</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/UseSearchParamsHook?name=Prasad&age=25">useSearchParamsHook</Link>
                                     </li>
                                 </ul>
                             </li>

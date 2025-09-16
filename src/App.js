@@ -30,6 +30,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PageNotFound404 from './navbar/PageNotFound404';
 import RoleBasedPageInfo from './navbar/RoleBasedPageInfo';
 import Home from './Home/Home';
+import UseSearchParamsHook from './Hooks/UseSearchParamsHook'
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -73,6 +74,7 @@ function App() {
             <Route path='PageNotFound404' element={<PageNotFound404/>}/>
             <Route path='RoleBasedPageInfo/:name' element={<RoleBasedPageInfo/>}/>
             <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
+            <Route path='UseSearchParamsHook' element={<UseSearchParamsHook/>}/>
           </Routes>
         </div>
       </BrowserRouter>

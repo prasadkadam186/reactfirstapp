@@ -2,12 +2,16 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 function UseSearchParamsHook()
 {
+    // we can use the useSearchParams 
     const [searchParams, SetSearchParams]=useSearchParams();
+    // Storing the default vaules i.e values coming from navbar will stored in this varible. 
     const name=searchParams.get('name') || "";
     const age=searchParams.get('age') || "";
 
+    // Storing the latest updated values
     const [updatedName, setupdatedName]=useState("");
     const [updatedAge, setUpdatedAge]=useState();
+    // To update the values on click on button.
     const updateParams=()=>{
         SetSearchParams({name:updatedName, age:updatedAge})
     }

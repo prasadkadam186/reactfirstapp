@@ -31,6 +31,9 @@ import PageNotFound404 from './navbar/PageNotFound404';
 import RoleBasedPageInfo from './navbar/RoleBasedPageInfo';
 import Home from './Home/Home';
 import UseSearchParamsHook from './Hooks/UseSearchParamsHook'
+import About from './NestedComponentRouting/About';
+import Company from './NestedComponentRouting/Company';
+import Other from './NestedComponentRouting/Other';
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -44,14 +47,15 @@ function App() {
         <div className="container mt-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/teacher" element={<Teacher />} />
-            <Route path="/student" element={<Student />} />
+            <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
+            <Route path="teacher" element={<Teacher />} />
+            <Route path="student" element={<Student />} />
             {/* Props with functional components */}
-            <Route path='/props' element={<Props name="Prasad" age="25" Roll_no="21" />} />
-            <Route path="/Loginform" element={<Loginform />} />
+            <Route path='props' element={<Props name="Prasad" age="25" Roll_no="21" />} />
+            <Route path="Loginform" element={<Loginform />} />
             <Route path='Conditionalrendering' element={<Conditionalrendering />} />
-            <Route path="/ControlledComponent" element={<ControlledComponent />} />
-            <Route path="/UncontrolledComponent" element={<UncontrolledComponent />} />
+            <Route path="ControlledComponent" element={<ControlledComponent />} />
+            <Route path="UncontrolledComponent" element={<UncontrolledComponent />} />
             {/* Passing the function as props to Inputbox child component from App components */}
             <Route path='/Inputbox' element={<Inputbox data={passFunctionAsProps} />} />
             <Route path='ConstructorClass' element={<ConstructorClass />} />
@@ -73,8 +77,12 @@ function App() {
             <Route path='HocComponent' element={<HocComponent />} />
             <Route path='PageNotFound404' element={<PageNotFound404/>}/>
             <Route path='RoleBasedPageInfo/:name' element={<RoleBasedPageInfo/>}/>
-            <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
             <Route path='UseSearchParamsHook' element={<UseSearchParamsHook/>}/>
+            {/* Nested Routing */}
+            <Route path='about' element={<About/>}>
+              <Route path='company' element={<Company/>}/>
+              <Route path='other' element={<Other/>}/>                                    
+            </Route>
           </Routes>
         </div>
       </BrowserRouter>

@@ -162,6 +162,9 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <Link className="nav-link" to={"about"}>Nested Routing Component</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -1,8 +1,10 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function UncontrolledComponent() {
     let input1=useRef("");
     let input2=useRef("");
+    const navigate = useNavigate();
     function saveForm(e)
     {
         e.preventDefault();
@@ -11,6 +13,10 @@ function UncontrolledComponent() {
         console.log("First Input Value : "+input1.current.value);
         console.log("Second Input value : "+input2.current.value);
         console.log("Third Input Value"+input3);
+    }
+    // To navigate via useNavigate() by using the function 
+    const toNavigate=(url)=>{
+        navigate(url);
     }
     return (
         <div>
@@ -27,7 +33,12 @@ function UncontrolledComponent() {
                 <input type="text" placeholder="input 3" id="input3" />
                 <br /><br />
                 <button>Submit</button>
+                <br /><br />
             </form>
+            <br /><br />
+            <button onClick={()=>{toNavigate('/ControlledComponent')}}>Go to Controlled Component</button>
+            <br /><br />
+            <button onClick={()=>{toNavigate('/ConstructorClass')}}>Go to Constructor Class Component</button>
         </div>
     )
 }

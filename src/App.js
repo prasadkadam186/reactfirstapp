@@ -37,7 +37,7 @@ import Other from './NestedComponentRouting/Other';
 import LoginPage from './ProtectedRoutes/login';
 import Protected from './ProtectedRoutes/Protected';
 import DefaultLandingPage from './ProtectedRoutes/DefaultLandingPage'
-
+import GetAPIComponent from './APICalling/GetAPIComponent';
 function App() {
   const [name, setName] = useState("Test User");
   function passFunctionAsProps() {
@@ -89,6 +89,8 @@ function App() {
             <Route path='LoginPage' element={<LoginPage/>}/>
             {/* Below DefaultLandingPage component is protected : If user is logged in then only he can see that component  */}
             <Route path='/' element={<Protected Component={DefaultLandingPage} />}/>
+            {/* API Calling routes  */}
+            <Route path='GetAPIComponent' element={<GetAPIComponent/>} />
           </Routes>
         </div>
       </BrowserRouter>

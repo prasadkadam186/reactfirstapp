@@ -5,12 +5,13 @@ function ControlledComponent()
     // Purpose of useNavigate : To navigate programatically
     const navigate = useNavigate();
     let [name,setName] = useState("Name");
-    let dataObj = {
-        name : 'Prasad',
-        age : '25',
-        city : 'Pune',
-        country : 'India'
-    }
+    // Declaring the array of object
+    let dataObj = [
+        {name:'user1', age:'25', address:'Pune'},
+        {name:'user2', age:'33', address:'Ahmednager'},
+        {name:'user3', age:'23', address:'Mumbai'},
+        {name:'user4', age:'32', address:'Nasik'},
+    ];
     return(
         <div>
             <h2>Controlled Components : </h2>

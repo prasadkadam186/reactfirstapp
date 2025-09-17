@@ -1,8 +1,6 @@
 // Purpose of Link : its used for routing without refreshing the page (<a> tag refesh the entire page that's why we are using this link tag)
-
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 function Navbar() {
-
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,6 +14,7 @@ function Navbar() {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li> */}
+                            <NavLink className={({ isActive }) =>isActive ? "nav-link active-link" : "nav-link"} to="/teacher">Teacher</NavLink>
                             {/* Component Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
@@ -30,16 +29,16 @@ function Navbar() {
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/student">propsWithClassComp</Link>
+                                        <NavLink className={({isActive})=>isActive ? "dropdown-menu .active-link" : "dropdown-menu"} to="/student">propsWithClassComp</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/props">propsWithFuncComp</Link>
+                                        <NavLink className="nav-link" to="/props">propsWithFuncComp</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/ControlledComponent">ControlledComponent</Link>
+                                        <NavLink className="nav-link" to="/ControlledComponent">ControlledComponent</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</Link>
+                                        <NavLink className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</NavLink>
                                     </li>
                                 </ul>
                             </li>

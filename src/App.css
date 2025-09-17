@@ -6,6 +6,18 @@
   height: 40vmin;
   pointer-events: none;
 }
+/* For normal nav items */
+.navbar-nav .active-link {
+  color: #ec661e !important;
+  /* font-weight: bold; */
+}
+
+/* For dropdown items */
+.dropdown-menu .active-link {
+  color: #ec661e !important;
+  background-color: #f8f9fa; /* light highlight for dropdown */
+  /* font-weight: bold; */
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

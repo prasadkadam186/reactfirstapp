@@ -1,14 +1,20 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function UncontrolledComponent() {
     let input1=useRef("");
     let input2=useRef("");
+    // Purpose : This hook is used to navigate from one component to another 
     const navigate = useNavigate();
+
+    // purpose : with the help of this hook we can collect and do opertion on the data comes from quary params 
+    const location=useLocation();
+    console.log(location);
+    
+    // Purpose : To save the form
     function saveForm(e)
     {
         e.preventDefault();
-
         let input3=document.getElementById("input3").value
         console.log("First Input Value : "+input1.current.value);
         console.log("Second Input value : "+input2.current.value);

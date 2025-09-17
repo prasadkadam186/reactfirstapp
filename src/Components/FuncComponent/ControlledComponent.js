@@ -5,6 +5,12 @@ function ControlledComponent()
     // Purpose of useNavigate : To navigate programatically
     const navigate = useNavigate();
     let [name,setName] = useState("Name");
+    let dataObj = {
+        name : 'Prasad',
+        age : '25',
+        city : 'Pune',
+        country : 'India'
+    }
     return(
         <div>
             <h2>Controlled Components : </h2>
@@ -14,7 +20,7 @@ function ControlledComponent()
             <h5>Name : {name}</h5>
             <br/>
             {/* Nevigating the another page by passing data in url */}
-            <button onClick={()=>navigate(`/UncontrolledComponent?name=${name}`)}>Go to Uncontrolled Component</button>
+            <button onClick={()=>navigate(`/UncontrolledComponent?name=${name}`,{state:dataObj})}>Go to Uncontrolled Component</button>
         </div>
     )
 }

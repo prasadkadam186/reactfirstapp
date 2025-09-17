@@ -14,7 +14,7 @@ function Navbar() {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li> */}
-                            <NavLink className={({ isActive }) =>isActive ? "nav-link active-link" : "nav-link"} to="/teacher">Teacher</NavLink>
+                            {/* <NavLink className={({ isActive }) =>isActive ? "nav-link active-link" : "nav-link"} to="/teacher">Teacher</NavLink> */}
                             {/* Component Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
@@ -141,7 +141,7 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-
+                            {/* HOC dropdownlist */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">HOC (High Order Component)</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -164,6 +164,18 @@ function Navbar() {
                             </li>
                             <li>
                                 <Link className="nav-link" to={"about"}>Nested Routing Component</Link>
+                            </li>
+                            {/* Protected route dropdown list */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ProtectedRoutes</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="/">DefaultLandingPage</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/LoginPage">Login Page</Link>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

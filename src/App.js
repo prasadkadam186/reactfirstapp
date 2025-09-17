@@ -34,6 +34,9 @@ import UseSearchParamsHook from './Hooks/UseSearchParamsHook'
 import About from './NestedComponentRouting/About';
 import Company from './NestedComponentRouting/Company';
 import Other from './NestedComponentRouting/Other';
+import LoginPage from './ProtectedRoutes/login';
+import Protected from './ProtectedRoutes/Protected';
+import DefaultLandingPage from './ProtectedRoutes/DefaultLandingPage'
 
 function App() {
   const [name, setName] = useState("Test User");
@@ -46,7 +49,7 @@ function App() {
         <Navbar />
         <div className="container mt-4">
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path='/*' element={<Navigate to="/PageNotFound404"/>}/>
             <Route path="teacher" element={<Teacher />} />
             <Route path="student" element={<Student />} />
@@ -83,6 +86,9 @@ function App() {
               <Route path='company' element={<Company/>}/>
               <Route path='other' element={<Other/>}/>                                    
             </Route>
+            <Route path='LoginPage' element={<LoginPage/>}/>
+            {/* Below DefaultLandingPage component is protected : If user is logged in then only he can see that component  */}
+            <Route path='/' element={<Protected Component={DefaultLandingPage} />}/>
           </Routes>
         </div>
       </BrowserRouter>

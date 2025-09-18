@@ -38,6 +38,7 @@ import LoginPage from './ProtectedRoutes/login';
 import Protected from './ProtectedRoutes/Protected';
 import DefaultLandingPage from './ProtectedRoutes/DefaultLandingPage'
 import GetAPIComponent from './APICalling/GetAPIComponent';
+import PostAPIIntegration from './APICalling/PostAPIIntegration'
 function App() {
   const [name, setName] = useState("Test User");
   function passFunctionAsProps() {
@@ -91,6 +92,7 @@ function App() {
             <Route path='/' element={<Protected Component={DefaultLandingPage} />}/>
             {/* API Calling routes  */}
             <Route path='GetAPIComponent' element={<GetAPIComponent/>} />
+            <Route path='PostAPIIntegration' element={<PostAPIIntegration/>} />
           </Routes>
         </div>
       </BrowserRouter>

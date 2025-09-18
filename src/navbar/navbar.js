@@ -183,6 +183,9 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="/GetAPIComponent">GetAPI</Link>
                                     </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="/PostAPIIntegration">PostAPI</Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

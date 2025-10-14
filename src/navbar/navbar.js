@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+// Purpose of Link : its used for routing without refreshing the page (<a> tag refesh the entire page that's why we are using this link tag)
+import { Link, NavLink } from 'react-router-dom';
 function Navbar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">ReactFirstApp</a>
+                    <a className="navbar-brand" href="/">ReactFirstApp</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -13,6 +14,7 @@ function Navbar() {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/teacher">Teacher</Link>
                             </li> */}
+                            {/* <NavLink className={({ isActive }) =>isActive ? "nav-link active-link" : "nav-link"} to="/teacher">Teacher</NavLink> */}
                             {/* Component Dropdown Menu */}
                             <li className="nav-item dropdown">
                                 <a
@@ -27,16 +29,16 @@ function Navbar() {
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/student">propsWithClassComp</Link>
+                                        <NavLink className={({isActive})=>isActive ? "dropdown-menu .active-link" : "dropdown-menu"} to="/student">propsWithClassComp</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/props">propsWithFuncComp</Link>
+                                        <NavLink className="nav-link" to="/props">propsWithFuncComp</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/ControlledComponent">ControlledComponent</Link>
+                                        <NavLink className="nav-link" to="/ControlledComponent">ControlledComponent</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</Link>
+                                        <NavLink className="nav-link" to="/UncontrolledComponent">UncontrolledComponent</NavLink>
                                     </li>
                                 </ul>
                             </li>
@@ -104,28 +106,85 @@ function Navbar() {
                                     <li>
                                         <Link className="dropdown-item" to="FordwardRefParentComponent">Fordward Ref Component</Link>
                                     </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/UseSearchParamsHook?name=Prasad&age=25">useSearchParamsHook</Link>
+                                    </li>
                                 </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/Loginform">React Forms</Link>
+                            {/* React Form dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">React Form</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/Loginform">React Forms</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="nav-link" to="/Inputbox">InputField</Link>
+                                    </li>
+                                </ul>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/Conditionalrendering">Conditionalrendering</Link>
-                            </li>
-                            <li>
-                                <Link className="nav-link" to="/Inputbox">InputField</Link>
-                            </li>
+                            {/* Collection dropdown  */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
                                         <Link className="dropdown-item" to="ArrayListWithMap">ArrayListWithMap</Link>
                                     </li>
-                                     <li>
+                                    <li>
                                         <Link className="dropdown-item" to="NestedArray">NestedArrayWithNestedMap</Link>
                                     </li>
                                     <li>
                                         <Link className="dropdown-item" to="ReusableParent">ReusableParent & Lifting State up</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            {/* HOC dropdownlist */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">HOC (High Order Component)</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="HocComponent">HocComponent</Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Use of Param's</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="/RoleBasedPageInfo/firstUser">First User</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/RoleBasedPageInfo/secondUser">Second User</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <Link className="nav-link" to={"about"}>Nested Routing Component</Link>
+                            </li>
+                            {/* Protected route dropdown list */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ProtectedRoutes</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="/">DefaultLandingPage</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/LoginPage">Login Page</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">API Calling</a>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" to="/GetAPIComponent">GetAPI</Link>
+                                    </li>
+                                     <li>
+                                        <Link className="dropdown-item" to="/PostAPIIntegration">PostAPI</Link>
                                     </li>
                                 </ul>
                             </li>
